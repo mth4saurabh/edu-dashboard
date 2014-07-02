@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>      
+    </tr>
+  </thead>    
+  <% @course.each do |course| %>
+    <tbody>
+      <td><%= course.name %></td>
+    </tbody>
+  <% end %>
+</table>
