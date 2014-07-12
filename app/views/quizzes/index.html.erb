@@ -4,9 +4,9 @@
       <th>Name</th>      
     </tr>
   </thead>    
-  <% @course.each do |course| %>
+  <% @quizzes.each do |quiz| %>
     <tbody>
-      <td><%= link_to course.name, '/courses/'+ course.id.to_s %></td>
+      <td><%= link_to quiz.name, '/quizzes/'+ quiz.id.to_s %></td>
     </tbody>
   <% end %>
 </table>

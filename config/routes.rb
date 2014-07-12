@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #root 'users#show'
   resources :users
   resources :courses
+  resources :quizzes
   root :to => redirect('/users/sign_in')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

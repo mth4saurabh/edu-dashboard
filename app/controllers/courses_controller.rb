@@ -4,17 +4,20 @@ class CoursesController < ApplicationController
 
   
   def index
-
-  end
-
-  
-  def show
     @user = current_user
     @course = Course.all
   end
 
   
+  def show
+    @user = current_user
+    @course = Course.where(id: params[:id]).first
+    session[:course_id] = @course.id
+  end
+
+  
   def new
+    @user = current_user
     @course = Course.new
   end
 

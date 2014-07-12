@@ -1,12 +1,15 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>      
+      <th>Name</th>
+      <th></th>      
     </tr>
   </thead>    
-  <% @course.each do |course| %>
+  
     <tbody>
-      <td><%= course.name %></td>
+      <td><%= @course.name %></td>
+      <td><%= link_to "New Quiz", new_quiz_path %></td>
+      <td><%= link_to "See All Quizzes", quizzes_path %></td>
     </tbody>
-  <% end %>
+  
 </table>

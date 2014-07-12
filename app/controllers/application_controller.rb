@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
 
   private
 
+  
+  def current_course
+    if Course.find(session[:course_id])
+      @current_course ||= Course.find(session[:course_id]) if session[:course_id]
+    end
+  end
+  helper_method :current_course
+
   # Overwriting the sign_out redirect path method
   def after_sign_in_path_for(users)
     users_path
